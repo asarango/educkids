@@ -1,0 +1,15 @@
+language: php
+php:
+  - "5.5"
+  - "5.4"
+
+# faster builds on new travis setup not using sudo
+sudo: false
+  
+before_script:
+  - composer self-update
+  - composer global require "fxp/composer-asset-plugin:~1.0.0"
+  - composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+  - cd basic
+  - composer require "fruppel/yii2-googlecharts" "*"
+  - composer update

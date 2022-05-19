@@ -1,0 +1,233 @@
+/**
+*PARA BODY
+**/
+
+html{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial,Heveltica, sans-serif;
+    /*background-color: #FAFAFA; /*esta estaba*/
+    background-color: #FFFFFF;
+    height: 100%
+    
+}
+
+.navbar {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.menu-margen-izq{
+    margin-left: -20px;
+    /*background-color: #0083c2;*/
+    background: -webkit-linear-gradient(top, #0083c2 0%, #036af6 10%, #a045de 100%);
+    background: -moz-linear-gradient(top, #0083c2 0%, #a045de 40%, #a045de 60%);
+    background: -ms-linear-gradient(top, #a045de 0%, #a045de 10%, #036af6 100%);
+    background: -o-linear-gradient(top, #a045de 0%, #a045de 10%, #036af6 100%);
+    
+    /*width: 100%;*/
+    
+    /*background-color: #222222;*/
+    /*border-top: solid 1px #ffffff;*/
+   
+    /*padding-top: 50px;*/
+}
+
+.contenedor{
+    color: #FFFFFF;
+    background-color: #0083c2;
+    padding: 0;
+    overflow: hidden;
+}
+
+.contenedor2{
+    color: #000000;
+    background-color: #e9f5f7;
+    padding: 0;
+    overflow: hidden;
+}
+
+.division{
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    /*background-color: #a05ce4;*/
+    float: left;
+}
+
+.division2{
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    /*background-color: #a05ce4;*/
+    float: right;
+}
+
+/*.cabFondo{
+    color: #FFFFFF;
+    background-color: #3c8dbc;
+    height: 50px;
+}
+
+.margen-izq-10{
+    margin-left: 10px;
+}*/
+
+
+/**
+/* PARA MENUS*/
+/**/
+.fondoMenu{
+    background-color: #000000;
+    /*height: 3000px;*/
+}
+
+.categoriaMenu{
+    color: #FFFFFF;
+    font-weight:bold;
+    
+}
+
+/*.opcionesMenu{
+    color: #FFFFFF;
+}*/
+
+.tamano10{
+    /* font-size:2em; */
+    font-size:10px;
+}
+
+.tamano8{
+    /* font-size:2em; */
+    font-size:8px;
+}
+
+
+/* PARA CARDS BOOTSTRAP
+*/
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+/*.container {
+    padding: 2px 16px;
+}*/
+
+
+/*FONDOS
+*/
+
+.fondotd{
+    color: #000000;
+    background-color: #D8ECF5;
+    height: 50px;
+}
+
+.fondotd2{
+    color: #000000;
+    background-color: #D8ECCC;
+    height: 50px;
+}
+
+
+
+/*Para la linea de carga de a href*/
+a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: left .8s;
+}
+a:hover:after {
+    left: 0;
+}
+
+
+
+
+/*---------------- INICIO para colocar el 100% del menu ----------------------------------*/ 
+
+  .row.table-row > [class*="col-"].custom {
+    /*background-color: lightgrey;*/
+    text-align: left;
+    font-size: 10px;
+    font-family: sans-serif;
+  }
+
+
+@media (min-width: 768px) {
+
+  img.img-fluid {width:100%;}
+
+  .row.table-row {display:table;width:100%;margin:0 auto;}
+
+  .row.table-row > [class*="col-"] {
+    float:none;
+    float:none;
+    display:table-cell;
+    vertical-align:top;
+  }
+
+  .row.table-row > .col-sm-11 {
+    width: 91.66666666666666%;
+  }
+  .row.table-row > .col-sm-10 {
+    width: 83.33333333333334%;
+  }
+  .row.table-row > .col-sm-9 {
+    width: 75%;
+  }
+  .row.table-row > .col-sm-8 {
+    width: 66.66666666666666%;
+  }
+  .row.table-row > .col-sm-7 {
+    width: 58.333333333333336%;
+  }
+  .row.table-row > .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-5 {
+    width: 41.66666666666667%;
+  }
+  .col-sm-4 {
+    width: 33.33333333333333%;
+  }
+  .row.table-row > .col-sm-3 {
+    width: 25%;
+  }
+  .row.table-row > .col-sm-2 {
+    width: 16.666666666666664%;
+  }
+  .row.table-row > .col-sm-1 {
+    width: 8.333333333333332%;
+  }
+
+
+}
+
+/*FIN ---- para colocar el 100% del menu -----------------------*/ 

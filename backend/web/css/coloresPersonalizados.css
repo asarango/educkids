@@ -1,0 +1,60 @@
+/*COLORES CORPORATIVOS*/
+
+/*Textos*/
+.text-primero{
+    color: #ab0a3d;   /*marron - NORTH*/
+}
+
+.text-segundo{
+    color: #0a1f8f; /*azul - AQ */
+}
+
+.text-tercero{
+    color: #ff9e18; /*amarillo - HOME SCHOOL*/
+}
+
+.text-cuarto{
+    color: #9e28b5; /* lila -KIDS */
+}
+
+.text-quinto{
+    color: #65b2e8; /* CELESTE ON LINE */
+}
+
+.text-sexto{
+    color: #898b8d; /* plomo GENERICO */    
+}
+/********************** fin de textos *****************/
+
+
+/* Inicio de fondos */
+.bg-primero{
+    background-color: #ab0a3d;   /*marron - NORTH*/
+    color: #fff;
+}
+
+.bg-segundo{
+    background-color: #0a1f8f; /*azul - AQ */
+    color: #fff;
+}
+
+.bg-tercero{
+    background-color: #ff9e18; /*amarillo - HOME SCHOOL*/
+    color: #fff;
+}
+
+.bg-cuarto{
+    background-color: #9e28b5; /* lila -KIDS */
+    color: #fff;
+}
+
+.bg-quinto{
+    background-color: #65b2e8; /* CELESTE ON LINE */
+    color: #fff;
+}
+
+.bg-sexto{
+    background-color: #898b8d; /* plomo GENERICO */
+    color: #fff;
+}
+/********************** fin de backgrounds *****************/

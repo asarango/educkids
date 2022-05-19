@@ -1,0 +1,222 @@
+.my-btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.my-primary{
+  border-color: #0a1f8f;
+  color: #0a1f8f;
+}
+
+.my-primary:hover {
+  background: #0a1f8f;
+  color: white;
+}
+
+.shadow-wine{
+    box-shadow: 20px 20px 20px -20px red;
+}
+
+
+.link{
+    color: #ab0a3d;
+}
+
+.link:hover{
+    color: #898b8d;
+}
+
+
+/****** PARA MENU ******/
+.menu{
+    display: none; 
+    float: left; 
+    padding: 10px; 
+    margin: 0; 
+    position: absolute;
+    background-color: #ab0a3d;
+    color: white;
+    /*height: 100vh;*/
+    width: 30vh;
+    border-color: #ab0a3d;
+    border-radius: 0 0 50% 0;
+    z-index: 100;
+}
+
+.btn-menu{
+    color: white;
+    font-size: 10px;
+}
+
+.btn-menu:hover{
+    color: #898b8d;
+    font-size: 12px;    
+}
+/****** fin MENU ******/
+
+.my-card-shadow{
+    box-shadow: 20px 20px 20px -20px #ccc;
+}
+
+/*** colores texto ***/
+
+.text-color-p{
+    color: #ab0a3d;
+}
+.text-color-s{
+    color: #0a1f8f;
+}
+.text-color-t{
+    color: #ff9e18;
+}
+.text-color-plomo{
+    color: #898b8d;
+}
+.text-color-kids{
+    color: #9e28b5;
+}
+.text-color-online{
+    color: #65b2e8;
+}
+
+/*** fin colores texto ***/
+
+
+/*tamaños de texto*/
+
+.my-text-small{
+    font-size: 10px;
+}
+.my-text-extra-small{
+    font-size: 8px;
+}
+
+.my-text-medium{
+    font-size: 12px;
+}
+
+.my-text-large{
+    font-size: 18px;
+}
+
+/*fin tamaños de texto*/
+
+.inputElegante{
+    border: none;
+    border-bottom: solid 1px #ccc;
+  }
+
+
+/*
+ESTILOS PARA SELECT 2
+*/
+
+
+.select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important
+}
+
+.select2-container--default .select2-selection--single,
+.select2-selection .select2-selection--single {
+    border: 1px solid #d2d6de;
+    border-radius: 0;
+    padding: 6px 12px;
+    height: 34px
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    user-select: none;
+    -webkit-user-select: none
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 10px
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    margin-top: -3px
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px
+}
+
+.select2-container--default .select2-selection--single,
+.select2-selection .select2-selection--single {
+    border: 1px solid #d2d6de;
+    border-radius: 0 !important;
+    padding: 6px 12px;
+    height: 40px !important
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    position: absolute;
+    top: 6px !important;
+    right: 1px;
+    width: 20px
+}
+
+/*
+///////////////////FIN ESTILOS PARA SELECT 2/////////////////////
+*/
+
+
+  /* Scroll para table ---- pantalla: Planificacion Vertical Pai-Criterios
+    url: http://192.168.20.25/educandi/backend/web/index.php?r=planificacion-vertical-pai-descriptores%2Findex1&unidad_id=1
+  */
+  #global {
+    height: 380px;
+    overflow-y: auto;
+    box-sizing:border-box;
+  }
+
+  .box-underline{
+      background-color:red;
+      font-size: 100px;
+  }
+  
+  .scroll-400 {
+    height: 600px;
+    overflow-y: auto;
+    box-sizing:border-box;
+  }
+  
+  .card-400{
+      height: 450px;
+  }
+  
+  .zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+  
