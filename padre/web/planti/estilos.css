@@ -1,0 +1,86 @@
+/**
+*PARA BODY
+**/
+.body{
+    background-color: #FAFAFA;
+}
+
+.menu-margen-izq{
+    margin-left: 0;
+    background-color: #222d32;
+    /*height: 3000px;*/
+}
+
+.cabFondo{
+    color: #FFFFFF;
+    background-color: #3c8dbc;
+    height: 50px;
+}
+
+.margen-izq-10{
+    margin-left: 10px;
+}
+
+
+/**
+/* PARA MENUS*/
+/**/
+.fondoMenu{
+    background-color: #222d32;
+    height: 3000px;
+}
+
+.categoriaMenu{
+    color: #FFFFFF;
+    font-weight:bold;
+}
+
+.opcionesMenu{
+    color: #FFFFFF;
+}
+
+.tamano10{
+    /* font-size:2em; */
+    font-size:10px;
+}
+
+.tamano8{
+    /* font-size:2em; */
+    font-size:8px;
+}
+
+
+/* PARA CARDS BOOTSTRAP
+*/
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
+/*FONDOS
+*/
+
+.fondotd{
+    color: #000000;
+    background-color: #D8ECF5;
+    height: 50px;
+}
+
+.fondotd2{
+    color: #000000;
+    background-color: #D8ECCC;
+    height: 50px;
+}

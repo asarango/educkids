@@ -1,0 +1,43 @@
+.uno li a{
+    text-decoration: none;
+    color: #898b8d;
+    font-family: arial;
+}
+
+.uno li ul li{
+    /*margin-left: -33px;*/
+    margin-left: -10px;
+}
+
+.dos>li{
+    font-weight: 300;
+    list-style: none;
+    font-size: 10px;
+}
+
+.dos>li>a:hover{
+    color: #ff9e18;
+    margin-left: 20px;
+}
+
+.uno>li{
+    list-style: none;
+    width: auto;    
+    /*height: 20px;*/
+    overflow: hidden;
+    font-weight: 600;
+    /*transition: 2s;*/
+}
+
+.uno>li:hover{
+    height: auto;
+}
+
+.mimenu{
+    background-color: white;
+    overflow: hidden;
+    width: auto;
+    height: 450px;
+    padding-right: 10px;
+    overflow-y: scroll;
+}

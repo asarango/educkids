@@ -1,0 +1,9 @@
+div.a {
+  width: 150px;
+  height: 80px;
+  alignment-baseline: central;
+  /*background-color: yellow;*/
+  -ms-transform: rotate(315deg); /* IE 9 */
+  -webkit-transform: rotate(315deg); /* Safari 3-8 */
+  transform: rotate(315deg);
+}
