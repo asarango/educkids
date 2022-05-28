@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use app\models\ScholarisAsistenciaProfesor;
 use app\models\ScholarisAsistenciaProfesorSearch;
+use backend\models\kids\ScriptsKids;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -78,8 +79,27 @@ class ScholarisAsistenciaProfesorController extends Controller {
         $scripts = new \backend\models\helpers\Scripts();
         $model = $scripts->sql_mostrar_clases_x_profesor();
 
+        $scriptsKids = new ScriptsKids();
+        
+        $clases = $scriptsKids->get_class_teacher();
+
+        $i = 0;
+        $j = 0;
+        foreach($clases as $mo){
+            if($mo['code'] == 'PRES'){
+                $i++;
+            }else{
+                $j++;
+            }
+        }
+
+        $i>0 ? $tienePrescolar = true : $tienePrescolar = false;
+        $j>0 ? $tieneOtras = true : $tieneOtras = false;
+
         return $this->render('index', [
                     'model' => $model,
+                    'tienePrescolar' => $tienePrescolar,
+                    'tieneOtras' => $tieneOtras
         ]);
     }
 

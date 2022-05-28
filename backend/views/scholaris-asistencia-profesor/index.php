@@ -25,15 +25,39 @@ $this->title = 'Mis actividades de hoy';
             <p>
                 |                                
                 <?=
-                Html::a('<span class="badge rounded-pill" style="background-color: #9e28b5"><i class="fa fa-briefcase" aria-hidden="true"></i> Inicio</span>',
+                Html::a('<span class="badge rounded-pill" style="background-color: #0a1f8f"><i class="fa fa-briefcase" aria-hidden="true"></i> Inicio</span>',
                         ['site/index'], ['class' => 'link']);
                 ?>                
-                |                                                
+                |    
+
                 <?=
-                Html::a('<span class="badge rounded-pill" style="background-color: #ff9e18"><i class="fa fa-briefcase" aria-hidden="true"></i> Mis clases</span>',
-                        ['profesor-inicio/index'], ['class' => 'link']);
-                ?>                
-                |                                                
+                Html::a('<span class="badge rounded-pill" style="background-color: #9e28b5">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i> Mis clases KIDS
+                                </span>',
+                        ['kids-menu/index1'], ['class' => 'link']);
+                ?>
+
+<!--                <?ph
+
+if($tienePrescolar){
+    echo Html::a('<span class="badge rounded-pill" style="background-color: #9e28b5">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i> Mis clases KIDS
+                </span>',
+                ['kids-menu/index1'], ['class' => 'link']);
+
+    echo ' | ';
+}
+    
+if($tieneOtras){
+    echo Html::a('<span class="badge rounded-pill" style="background-color: #ff9e18">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> Mis clases
+        </span>',
+        ['profesor-inicio/index'], ['class' => 'link']);
+
+        echo ' | ';
+}                    
+
+?>                                              -->
 
 
             </p>
@@ -74,22 +98,20 @@ $this->title = 'Mis actividades de hoy';
                                 echo '<td class="text-center">' . Html::a('<i class="fas fa-person-booth"></i> Ingresar', [
                                     '/comportamiento/index',
                                     "id" => $data['asistencia_id']
-                                        ], ['class' => 'link','style' => 'color: #898b8d']) .
+                                        ], ['class' => 'link', 'style' => 'color: #898b8d']) .
                                 '</td>';
                             } else {
                                 echo '<td class="text-center">' . Html::a('<i class="fas fa-user-clock btn_registrar"> Registrar</i>', [
                                     'registrar',
                                     "clase" => $data['clase_id'],
                                     'hora' => $data['hora_id']
-                                        ], ['class' => 'link',  
-                                            'style' => 'color: #0a1f8f', 
-                                            //'id' => 'btn-registrar'.$data['detalle_id'],
-                                            'onclick' => 'bloque_btn_registrar()'
-                                            ]);
+                                        ], ['class' => 'link',
+                                    'style' => 'color: #0a1f8f',
+                                    //'id' => 'btn-registrar'.$data['detalle_id'],
+                                    'onclick' => 'bloque_btn_registrar()'
+                                ]);
                                 echo '<i class="fas fa-spinner fa-spin btn-sppiner" style="display: none"></i>';
                                 echo '</td>';
-                                
-                                
                             }
 
                             echo '</tr>';
@@ -153,13 +175,13 @@ $this->title = 'Mis actividades de hoy';
 //        alert('Registrado exitosamente!!!');
 //    }
 
-function bloque_btn_registrar(){
-    
-    $('.btn_registrar').hide();
-    $('.btn-sppiner').show();
-    
-    //alert(btn_id);
-        
-}
+    function bloque_btn_registrar() {
+
+        $('.btn_registrar').hide();
+        $('.btn-sppiner').show();
+
+        //alert(btn_id);
+
+    }
 
 </script>
