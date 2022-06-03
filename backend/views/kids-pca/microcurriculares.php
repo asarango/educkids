@@ -23,7 +23,7 @@ $orden = $numMicro + 1;
                     <tr>
                         <th>#</th>
                         <th>UNIDAD MICROCURRICULAR</th>
-                        <th colspan="2" style="text-align: center">ACCIONES</th>
+                        <th colspan="3" style="text-align: center">ACCIONES</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -97,7 +97,15 @@ $orden = $numMicro + 1;
   </div>
 </div>
 
-                                </td>                                
+                                </td> 
+                                <td style="width:80px">
+                                    <?php
+                                        if($micro['estado'] == 'INICIANDO'){echo '<span class="badge bg-warning">INICIANDO</span>';}
+                                        if($micro['estado'] == 'JEFE_AREA'){echo '<span class="badge bg-info">ENVIADO JEFE AREA</span>';}
+                                        if($micro['estado'] == 'RECHAZADO'){echo '<span class="badge bg-dark">RECHAZADO</span>';}
+                                        if($micro['estado'] == 'APROBADO'){echo '<span class="badge bg-success">APROBADO</span>';}
+                                    ?>
+                                </td>                               
                             </tr>
                             <?php
                         }
