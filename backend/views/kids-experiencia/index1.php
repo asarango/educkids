@@ -6,13 +6,14 @@ use yii\grid\GridView;
 $this->title = 'Experiencia Microcurricular';
 $this->params['breadcrumbs'][] = $this->title;
 
- echo '<pre>';
+//  echo '<pre>';
 // print_r($micro);
- print_r($objetivosIntegradores);
+//  print_r($objetivosIntegradores);
 // print_r($objetivosDisponibles);
+// print_r($objetivo);
 // print_r($objetivosSeleccionados);
 // print_r($datos);
- die('aqui die');
+//  die('aqui die');
 ?>
 
 <div class="kids-experiencia-index1">
@@ -100,8 +101,16 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);
                                 ?>
                             </div>
-                            <div class="tab-pane fade" id="nav-objetivo-tab" role="tabpanel" aria-labelledby="nav-objetivo-tab">2</div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">3</div>
+                            <div class="tab-pane fade" id="nav-objetivo-tab" role="tabpanel" aria-labelledby="nav-objetivo-tab">
+                                <?=$this->render('objetivos-integradores',[
+                                    'micro' => $micro,
+                                    'objetivosDisponibles' => $objetivosDisponibles,
+                                    'objetivosSeleccionados' => $objetivosSeleccionados
+                                ]); ?>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <?= $this->render('observaciones-coordinador'); ?>
+                            </div>
                         </div> 
 
 

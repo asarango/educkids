@@ -6,7 +6,9 @@ use backend\models\IsmAreaMateria;
 use backend\models\kids\micro\Datos;
 use backend\models\kids\micro\PlanExperiencia;
 use backend\models\KidsMicroDestreza;
+use backend\models\KidsMicroObjetivos;
 use backend\models\KidsUnidadMicro;
+use backend\models\CurCurriculoObjetivoIntegrador;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -21,15 +23,26 @@ class KidsExperienciaController extends Controller {
 
     public function actionIndex1() {
         $html = '';
-        $experienciaId = $_GET['id'];
+        $experienciaId = $_GET['id']; //microId = experienciaId
         $micro = KidsUnidadMicro::findOne($experienciaId);
 
         $objDatos = new Datos($experienciaId);
         $datos = $objDatos->response;
 
+        $objetivosSeleccionados = KidsMicroObjetivos::find()->where([
+            'micro_id' => $experienciaId
+        ])->all();
+        // echo '<pre>';
+        // print_r($objetivosSeleccionados);
+        // die();
+
+        $objetivosDisponibles =  $this->consulta_objetivos_disponibles($experienciaId);
+
         return $this->render('index1', [
                     'micro' => $micro,
                     'datos' => $datos,
+                    'objetivosDisponibles' => $objetivosDisponibles,
+                    'objetivosSeleccionados' => $objetivosSeleccionados,
                     'html' => $html
         ]);
     }
@@ -83,6 +96,20 @@ class KidsExperienciaController extends Controller {
             return $this->redirect([
                         'index1', 'id' => $_POST['micro_id']
             ]);
+        } elseif($_POST['bandera'] == 'objetivo') {
+            
+            $usuarioLog = Yii::$app->user->identity->usuario;
+            $hoy = date('Y-m-d H:i:s');
+
+            $model = new KidsMicroObjetivos();
+            $model->micro_id = $_POST['micro_id'] ;
+            $model->objetivo_id = $_POST['objetivo_id'] ;
+            $model->created_at = $hoy ;
+            $model->created = $usuarioLog;
+            $model->save();
+            // print_r($model);
+            // die();
+
         }
 
         return $html;
@@ -250,5 +277,33 @@ class KidsExperienciaController extends Controller {
 
         return $html;
     }
+
+    // Consulta objetivos integradores disponibles
+    private function consulta_objetivos_disponibles($microId){
+        $con = Yii::$app->db;
+        $query = "select
+                        *
+                    from
+                        cur_curriculo_objetivo_integrador ob
+                    where
+                        id not in(
+                                    select
+                                        id
+                                    from
+                                        kids_micro_objetivos kmo
+                                    where
+                                        micro_id = $microId	
+                    )order by orden;";
+
+        $res = $con->createCommand($query)->queryAll();
+        return $res;
+    }
+
+    //Elimina objetivos integradores por AJAX
+    public function eliminaObjetivo(){
+        $model = KidsMicroObjetivos::findOne($_POST['id'])->delete();
+    }
+
+
 
 }
